@@ -4,9 +4,9 @@ Helper functions to create a multi-layer perceptron model and a separable CNN
 model. These functions take the model hyper-parameters as input. This will
 allow us to create model instances with slightly varying architectures.
 """
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
+# from __future__ import absolute_import
+# from __future__ import division
+# from __future__ import print_function
 
 from tensorflow.python.keras import models
 from tensorflow.python.keras import initializers

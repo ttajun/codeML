@@ -2,15 +2,18 @@
 
 Converts the given training and validation texts into numerical tensors.
 """
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
+# from __future__ import absolute_import
+# from __future__ import division
+# from __future__ import print_function
 
+from msilib import sequence
 import tensorflow as tf
 import numpy as np
 
-from tensorflow.python.keras.preprocessing import sequence
-from tensorflow.python.keras.preprocessing import text
+# from tensorflow.python.keras.preprocessing import sequence
+# from tensorflow.python.keras.preprocessing import text
+sequence = tf.keras.preprocessing.sequence
+text = tf.keras.preprocessing.text
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.feature_selection import SelectKBest
 from sklearn.feature_selection import f_classif
@@ -51,7 +54,8 @@ def ngram_vectorize(train_texts, train_labels, val_texts):
     # Create keyword arguments to pass to the 'tf-idf' vectorizer.
     kwargs = {
             'ngram_range': NGRAM_RANGE,  # Use 1-grams + 2-grams.
-            'dtype': 'int32',
+            # 'dtype': 'int32',
+            'dtype': np.float64,
             'strip_accents': 'unicode',
             'decode_error': 'replace',
             'analyzer': TOKEN_MODE,  # Split text into word tokens.

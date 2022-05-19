@@ -4,8 +4,10 @@ sys.path.append(os.path.dirname(__file__))
 
 # tensorflow warning 제거. tensorflow import 전에 실행해야 함 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
+import tensorflow as tf
 
 from common import const, logger
+from ml import build_model, load, explore, vectorize
 log = logger.make_logger(__name__)
 
 
