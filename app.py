@@ -13,7 +13,8 @@ log = logger.make_logger(__name__)
 
 def main():
     con = const.Const
-    log.info(f'### codeML : version {con.VERSION}')
+    log.info(f'# codeML     : ver {con.VERSION}')
+    log.info(f'# tensorflow : ver {tf.__version__}')
 
     # Step 1. 수집 - Gather Data
 
