@@ -1,0 +1,41 @@
+# common
+**/.classpath
+**/cscope.*
+**/tags
+**/*.swp
+
+# visual studio code
+**/.vscode
+
+# maven
+**/target/
+
+# intellij
+.idea/
+**/*.iml
+
+# eclipse
+**/.project
+**/.settings
+**/.springBeans
+
+# python
+**/__pycache__/
+
+# report
+**/execute*
+**/*.xlsx
+
+# output
+**/*.out
+*.egg-info/
+build/
+dist/
+
+# log etc
+**/*.log
+**/*.log.*
+**/*.pickle
+
+# result
+**/result/
